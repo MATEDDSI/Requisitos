@@ -1,0 +1,43 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[vmargin=2cm,hmargin=2cm]{geometry}
+\usepackage{enumerate}
+\usepackage{dsfont}
+\usepackage{graphicx}
+
+\title{\Huge \textbf{Descripción del problema\\DDSI}}
+
+\author{Antonio Checa Molina \\ Iñaki Madinabeitia \\ Bruno Santidrián \\ Darío Sierra}
+
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\newpage
+\section{Gestión de un registro de partidas en juegos generales}
+
+El problema a resolver es mantener un registro rápido y funcional de partidas para cualquier tipo de juegos, deportes o competiciones con el fin de facilitar análisis y entrenamiento de jugadores. Hay que desarrollar un sistema de información de organización de las partidas y de los juegos.
+
+Al principio, un grupo de gestores necesita proporcionar información de un juego y de sus partidas: aquello que se guarda, como la puntuación, los equipos, los jugadores de los equipos o un vídeo del partido. Una vez guardados estos atributos, el usuario podrá acceder al registro de partidas de un juego concreto e incluir aquellas de las que tenga datos. 
+
+Por ejemplo, si se añade el juego baloncesto junto a un conjunto de atributos como \{Puntuación, Equipos, Puntuación de cada parcial, vídeos\}, cada partida contendrá esta información y los usuarios podrán acceder a esta. En esta práctica nos restringiremos a un pequeño número de juegos, realizando el diseño de base de datos para cada uno.
+
+\subsection{Consulta}
+La función principal es que el usuario pueda buscar con facilidad partidas en función de los atributos. Necesita permitir al usuario fijar uno de los atributos, buscar en un rango de parámetros o hacer búsquedas flexibles en cualquiera de los juegos soportados. En el ejemplo de antes, un usuario podría buscar los partidos del Golden State Warriors en los que haya participado Curry y que haya metido más de 30 puntos, o en los que haya participado el Unicaja y haya perdido.
+
+\subsection{Consejos}
+En todos los juegos en los que se guarde el estilo de juego, la aplicación aconseja cómo jugar en contra de un oponente en concreto, recomendándote aquellos estilos que más probabilidades tengan de ganar contra ese adversario. Esto, aunque más limitado, suele ser más útil para un usuario medio.
+
+\subsection{Inclusión de partidas}
+La inclusión de las partidas necesita que el usuario incluya aquellos atributos vitales en una partida, pudiendo o no incluir los opcionales. Necesitaría insertarlos por la interfaz gráfica.
+
+\subsection{Estadísticas}
+Por último, el sistema realiza las estadísticas que el usuario pida, mostrando por pantalla el máximo número de datos útiles que se puedan. Para cada juego este sistema varía en función de los datos y gráficas enseñadas. 
+	
+\end{document}
