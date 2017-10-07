@@ -29,15 +29,15 @@ Al principio, un grupo de gestores necesita proporcionar información de un jueg
 Por ejemplo, si se añade el juego baloncesto junto a un conjunto de atributos como \{Puntuación, Equipos, Puntuación de cada parcial, vídeos\}, cada partida contendrá esta información y los usuarios podrán acceder a esta. En esta práctica nos restringiremos a un pequeño número de juegos, realizando el diseño de base de datos para cada uno.
 
 \subsection{Consulta}
-La función principal es que el usuario pueda buscar con facilidad partidas en función de los atributos. Necesita permitir al usuario fijar uno de los atributos, buscar en un rango de parámetros o hacer búsquedas flexibles en cualquiera de los juegos soportados. En el ejemplo de antes, un usuario podría buscar los partidos del Golden State Warriors en los que haya participado Curry y que haya metido más de 30 puntos, o en los que haya participado el Unicaja y haya perdido.
+\input{Funcionalidades/Consulta.tex}
 
 \subsection{Consejos}
-En todos los juegos en los que se guarde el estilo de juego, la aplicación aconseja cómo jugar en contra de un oponente en concreto, recomendándote aquellos estilos que más probabilidades tengan de ganar contra ese adversario. Esto, aunque más limitado, suele ser más útil para un usuario medio.
+\input{Funcionalidades/Consejos.tex}
 
 \subsection{Inclusión de partidas}
-La inclusión de las partidas necesita que el usuario incluya aquellos atributos vitales en una partida, pudiendo o no incluir los opcionales. Necesitaría insertarlos por la interfaz gráfica.
+\input{Funcionalidades/InclusionPartidas.tex}
 
 \subsection{Estadísticas}
-Por último, el sistema realiza las estadísticas que el usuario pida, mostrando por pantalla el máximo número de datos útiles que se puedan. Para cada juego este sistema varía en función de los datos y gráficas enseñadas. 
+\input{Funcionalidades/Estadisticas.tex}
 	
 \end{document}
