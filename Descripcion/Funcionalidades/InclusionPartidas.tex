@@ -1,1 +1,11 @@
-La inclusión de las partidas necesita que el usuario incluya aquellos atributos vitales en una partida, pudiendo o no incluir los opcionales. Necesitaría insertarlos por la interfaz gráfica.
+La inclusión de las partidas necesita que el usuario incluya aquellos atributos vitales en una partida, pudiendo o no incluir los opcionales. Necesitaría insertarlos por la interfaz gráfica.\\
+
+El sistema de información que planteamos crear deberá incrementar el número de juegos disponibles con el avance del tiempo, para asegurar su uso continuado. Por tanto, distinguimos entre inclusión de juegos (trabajo de los administradores de la base de datos) y la inclusión de partidas (trabajo de los usuarios).\\
+
+Una partida será un registro más de la tabla de datos asociada a cada juego. Como atributo vital se necesitará añadir el nombre del juego, así como la puntuación final de dicha partida; estos serán atributos comunes a cada a todas las partidas, pues todas pertenecerán a un juego y todas tendrán una puntuación asociada.\\
+
+Los atributos opcionales serán aquellos inherentes a cada juego; no tiene sentido la inclusión de un atributo 'Jugadores del equipo' en un juego de cartas, ni un 'baraja del oponente' en uno que no lo sea. Aquí opcional no se entiende como 'poco relevante' pues estos atributos son la razón de ser del propio sistema de información. Los datos inherentes a cada juego, los que lo hacen distinguible del resto, serán objeto del análisis en el sistema.\\
+
+Las partidas se incluirán desde la interfaz gráfica, donde una vez seleccionado el tipo de juego, se abrirán una serie de atributos (a definir por los administradores del sistema) que permitirán al jugador guardar su partida. Entre estos podremos encontrar: 'Jugadores del equipo', 'Mi Baraja', 'Baraja del oponente', 'Número de faltas cometido', 'Pichichi del encuentro', etc.\\
+
+Aunque hemos clarificado que la inclusión de partidas debe ser trabajo de los usuarios, en juegos específicos (fútbol, baloncesto, etc), en los que, a diferencia de una partida entre dos jugadores de ajedrez, no queda claro quién debe almacenar el resultado. Es por esto, que se estudiará la posibilidad de responsabilizar a los administradores de mantener la base de datos actualizada para los juegos en los que se de esta situación.
