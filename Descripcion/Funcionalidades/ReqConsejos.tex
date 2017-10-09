@@ -1,11 +1,14 @@
-\susbsubsection{Requisitos de datos}
+\subsubsection{Requisitos de datos}
 
 	\begin{itemize}
-		\item \textbf{RD1: Debilidades y fortalezas de tipos pokémon,} para
+		\item \textbf{RD1: Jugador de pokémon} contra el que diseñar un equipo. Se
+			requiere la identificación del jugador.
+
+		\item \textbf{RD2: Debilidades y fortalezas de tipos pokémon,} para
 			cada tipo se require del multiplicador de ataque contra los
 			demás tipos.\\
 
-		\item \textbf{RD2: Información de ataques pokémon,} para cada ataque
+		\item \textbf{RD3: Información de ataques pokémon,} para cada ataque
 			se requiere:
 			\begin{itemize}
 				\item Tipo del ataque
@@ -15,7 +18,7 @@
 				\item Puntos de poder
 			\end{itemize}
 
-		\item \textbf{RD3: Estadísticas base de los pokemon,} para cada pokémon
+		\item \textbf{RD4: Estadísticas base de los pokemon,} para cada pokémon
 			se requiere:
 			\begin{itemize}
 				\item Puntos de salud
@@ -26,7 +29,7 @@
 				\item Puntos de velocidad
 			\end{itemize}
 
-		\item \textbf{RD4: Equipos pokémon usados por un jugador} en las partidas
+		\item \textbf{RD5: Equipos pokémon usados por un jugador} en las partidas
 			registradas. Se compone de:
 			\begin{itemize}
 				\item Una lista de como máximo seis pokémon por partida.
@@ -42,10 +45,10 @@
 					\end{itemize}
 			\end{itemize}
 
-		\item \textbf{RD5: Equipo pokémon} diseñado para vencer a un oponente.
+		\item \textbf{RD6: Equipo pokémon} diseñado para vencer a un oponente.
 			Consta de:
 			\begin{itemize}
-				\item Una lista de como máximo seis pokémon por partida.
+				\item Una lista de como máximo seis pokémon.
 				\item Los atributos relacionados con cada pokemon
 					(opcionales), estos son:
 					\begin{itemize}
@@ -67,19 +70,20 @@
 
 		Requisitos de entrada:
 		\begin{itemize}
-			\item RD1 %% tabla tipos
-			\item RD2 %% info ataques
-			\item RD3 %% Estadisticas base
+			\item RD1
+			\item RD2
+			\item RD3
+			\item RD4
 		\end{itemize}
 
 		Manejamiento de datos:
 		\begin{itemize}
-			\item RD4 %Equipos utilizados de un jugador
+			\item RD5
 		\end{itemize}
 
 		Salida:
 		\begin{itemize}
-			\item RD5 %Equipo pokemon
+			\item RD6
 		\end{itemize}
 	\end{itemize}
 
