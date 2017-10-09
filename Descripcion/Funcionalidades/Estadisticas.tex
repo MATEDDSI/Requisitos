@@ -1,1 +1,8 @@
-Por último, el sistema realiza las estadísticas que el usuario pida, mostrando por pantalla el máximo número de datos útiles que se puedan. Para cada juego este sistema varía en función de los datos y gráficas enseñadas. 
+Por último, el sistema debería agregar las estadísticas que pida el usuario. Hay diversos modos de generar una gráfica. El usuario tendrá que indicar al sistema qué modo de salida de los datos quiere (por ejemplo, una gráfica 2D con líneas). Una vez indicado, tendrá que añadir sobre qué atributos del juego quiere la gráfica de datos (por ejemplo, sobre la puntuación de los partidos de los Lakers en cada mes). Después, el sistema debe generar la representación elegida de los datos en caso de que pueda y presentarla ante el usuario. En caso de que no pueda deberá mostrar un mensaje de error mencionando la causa.
+
+Al tratar los atributos el usuario debe ser capaz de realizar funciones como la media, la suma o contar datos que cumplan una restricción concreta. Para esto, el sistema debe ser capaz de proporcionar ayuda con todas las funciones que se pueden insertar, y gestionarlas para que funcionen como es debido.
+
+
+Las estadísticas, datos y gráficas generadas se tendrán que guardar en el sistema, para que el usuario pueda acceder a ellas sin tener que generarlas de nuevo. Habrá acceso a un registro con orden inverso a la fecha de creación para facilitar la búsqueda en el mismo.
+
+Cada modo de salida tiene unas restricciones sobre los atributos, en el caso en el que el usuario incluya unos datos erróneos para una gráfica concreta (por ejemplo, seleccionar el modo de disco para representar datos que no son números). En este caso, el error tendrá que hacer referencia al error concreto, y mostrarlo por pantalla para que el usuario entienda qué ha pasado. 
