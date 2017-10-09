@@ -1,1 +1,10 @@
-La función principal es que el usuario pueda buscar con facilidad partidas en función de los atributos. Necesita permitir al usuario fijar uno de los atributos, buscar en un rango de parámetros o hacer búsquedas flexibles en cualquiera de los juegos soportados. En el ejemplo de antes, un usuario podría buscar los partidos del Golden State Warriors en los que haya participado Curry y que haya metido más de 30 puntos, o en los que haya participado el Unicaja y haya perdido.
+La función principal es que el usuario pueda buscar con facilidad partidas en función de los atributos. Necesita permitir al usuario fijar uno de los atributos, buscar en un rango de parámetros o hacer búsquedas flexibles en cualquiera de los juegos soportados.
+
+Imaginemos que estamos con Baloncesto con muchos partidos de varios equipos ya añadidos. La aplicación debe permitir al usuario buscar aspectos simples como "Todos los partidos del Unicaja" o "Partidos en los que ganó el Real Madrid" o "Qué equipo jugó en tal partido como titular". Todo esto son consultas a una base de datos, pero la aplicación debe permitir al usuario realizarlas sin tener conocimiento en absoluto sobre bases de datos, apoyadas con una intuitiva interfaz gráfica. 
+
+También debe permitir búsqueda donde el usuario otorgue uno o varios parámetros. Con la idea de usar la consulta en esta aplicación para estudiar al rival, también debe permitir buscar partidos donde, según el ejemplo anterior, la diferencia en el marcador fue menos de 10, o donde tal jugador jugó tantos minutos, o donde tal jugador metió tantos puntos. En estos ejemplos, el parámetro sería los números.
+
+Como la aplicación debe permitir hacer consultas sin que el usuario conozca sobre cómo se consulta a una base de datos, debemos limitar qué aspectos se pueden consultar. En resumen, la aplicación permitirá mostrar cualquier atributo de cualquier partida, mostrar las partidas seleccionadas tras hacer una restricción del valor de los atributos (con paso de parámetros en algunos casos concretos); y todo esto siempre en el ámbito del mismo juego.
+
+
+  En el ejemplo de antes, un usuario podría buscar los partidos del Golden State Warriors en los que haya participado Curry y que haya metido más de 30 puntos, o en los que haya participado el Unicaja y haya perdido.
