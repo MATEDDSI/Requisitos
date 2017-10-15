@@ -1,128 +1,45 @@
 \subsubsection{Requisitos de datos}
 
 	\begin{itemize}
-		\item \textbf{RD1: Jugador de pokémon} contra el que diseñar un equipo. Se
-			requiere la identificación del jugador.
+		\item \textbf{RD2.1: Juego} sobre el que se va a aconsejar.
+			Se require un identificador del juego.
 
-		\item \textbf{RD2: Debilidades y fortalezas de tipos pokémon,} para
-			cada tipo se require del multiplicador de ataque contra los
-			demás tipos.\\
+		\item \textbf{RD2.2: Atributo} para el que se quiere consejo.
+			Requiere un identificador del atributo.
 
-		\item \textbf{RD3: Información de ataques pokémon,} para cada ataque
-			se requiere:
-			\begin{itemize}
-				\item Tipo del ataque
-				\item Potencia del ataque
-				\item Precisión del ataque
-				\item Si es físico, especial o de estado
-				\item Puntos de poder
-			\end{itemize}
+		\item \textbf{RD2.3: Oponente} contra el que optimizar el atributo.
+			Requiere un identificador del oponente.
 
-		\item \textbf{RD4: Estadísticas base de los pokemon,} para cada pokémon
-			se requiere:
-			\begin{itemize}
-				\item Puntos de salud
-				\item Puntos de ataque
-				\item Puntos de defensa
-				\item Puntos de ataque especial
-				\item Puntos de defensa especial
-				\item Puntos de velocidad
-			\end{itemize}
+		\item \textbf{RD2.4: Partidas del juego} almacenadas. 
+			Se requerirán los campos que se considere que tienen información
+			relevante para el consejo.
 
-		\item \textbf{RD5: Equipos pokémon usados por un jugador} en las partidas
-			registradas. Se compone de:
-			\begin{itemize}
-				\item Una lista de como máximo seis pokémon por partida.
-				\item Los atributos relacionados con cada pokemon
-					(opcionales), estos son:
-					\begin{itemize}
-						\item Id del pokémon
-						\item Nombre de los ataques
-						\item Objeto asignado
-						\item Naturaleza
-						\item Distibución de IVs
-						\item Distribución de EVs
-					\end{itemize}
-			\end{itemize}
+		\item \textbf{RD2.5: Valor del atributo} optimizado contra el oponente. 
 
-		\item \textbf{RD6: Equipo pokémon} diseñado para vencer a un oponente.
-			Consta de:
-			\begin{itemize}
-				\item Una lista de como máximo seis pokémon.
-				\item Los atributos relacionados con cada pokemon
-					(opcionales), estos son:
-					\begin{itemize}
-						\item Id del pokémon
-						\item Nombre de los ataques
-						\item Objeto asignado
-						\item Naturaleza
-						\item Distibución de IVs
-						\item Distribución de EVs
-					\end{itemize}
-			\end{itemize}
-
-		\item \textbf{RD7: Jugador de Hearthstone} contra el que diseñar el mazo.
-			Se requiere su identificación.
-
-		\item \textbf{RD8: Atributos de las cartas de Hearthsone.} Para cada
-			carta se requiere:
-			\begin{itemize}
-				\item 
-			\end{itemize}
-
-		\item \textbf{RD9: Mazos de Hearthstone usados por un jugador} en las
-			partidas registradas. Se compone de:
-			\begin{itemize}
-				\item Un heroe
-				\item Una lista de identificadores de treinta cartas
-			\end{itemize}
-
-		\item \textbf{RD10: Estilo de juego de un jugador de Hearthsone,} puede
-			ser ofensivo, defensivo, mixto ...
-
-		\item \textbf{RD11: Mazo de Hearthstone} diseñado para vencer a un
-			oponente. Consta de:
-			\begin{itemize}
-				\item Un heroe
-				\item Una lista de indentificadores de treinta cartas
-			\end{itemize}
 	\end{itemize}
 
 
 \subsubsection{Requisitos funcionales}
 
 	\begin{itemize}
-		\item \textbf{RF1: Recomendar equipos pokémon:}\\
-		Requisitos de entrada:
-		\begin{itemize}
-			\item RD1
-			\item RD2
-			\item RD3
-			\item RD4
-		\end{itemize}
-		Manejo de datos:
-		\begin{itemize}
-			\item RD5
-		\end{itemize}
-		Salida:
-		\begin{itemize}
-			\item RD6
-		\end{itemize}
+		\item \textbf{RF2.1: Recomendar un atributo contra un oponente:} 
+			El usuario selecciona un atributo del juego y un oponente y el
+			sistema le proporciona un valor del atributo que probablemente
+			sea beneficioso contra ese oponente.\\
 
-		\item \textbf{RF2: Recomendar mazos de Hearthstone:}\\
 		Requisitos de entrada:
 		\begin{itemize}
-			\item RD7 %oponente
-			\item RD8 %atributos cartas
+			\item RD2.1 %juego
+			\item RD2.2 %atributo
+			\item RD2.3 %oponente
 		\end{itemize}
 		Manejo de datos:
 		\begin{itemize}
-			\item RD9 %mazos oponente 
-			\item RD10 %estilo de juego
+			\item RD2.4 %partidas relevantes
 		\end{itemize}
 		Salida:
 		\begin{itemize}
-			\item RD11 %mazo diseñado
+			\item RD2.5 %valor atributo
 		\end{itemize}
 
 	\end{itemize}
