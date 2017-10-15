@@ -1,6 +1,54 @@
 %TODO
 \subsubsection{Requisito de datos}
+\begin{itemize}
+	\item \textbf{RD3.1: Atributos Principales}, proporcionados por el usuario, se componen de:
+	\begin{itemize}
+		\item Puntuación de la partida.
+		\item Nombre del juego
+	\end{itemize}
+	
+	\item \textbf{RD3.2: Atributos Secundarios}, se componen de:
+	\begin{itemize}
+		\item Nombre
+		\item Valor del atributo
+	\end{itemize}
+	La lista de atributos secundarios la definirań los administradores del sistema.
+\end{itemize}
+
+
 
 \subsubsection{Requisitos funcionales}
 
-\subsubsection{Restricciones semánticas}
+\begin{itemize}
+	\item \textbf{RF3.1 Selección del juego}: El usuario selecciona uno de entre los juegos que recoge el sistema.
+	\begin{itemize}
+		\item RD3.1
+	\end{itemize}
+	Salida: En pantalla se muestran los juegos posibles.
+	
+	\item \textbf{RF3.2 Inclusión de una partida}: El usuario inserta el atributo principal y crea un nuevo registro de partida.
+	\begin{itemize}
+		\item RD3.1
+	\end{itemize}
+	Requisitos de entrada: Una vez escogido el juego se inserta la puntuación de la partida.
+	
+	Manejo de datos: Se leen el atributo proporcionado y se el registro en la base de datos
+	
+	Salida: Mensaje de conformidad.
+	
+	
+	\item \textbf{RF3.3 Modificación de un registro}: Una vez creado, el usuario podrá añadir atributos opcionales al registro.
+	
+	Requisitos de entrada: Lista de los atributos a insertar
+	\begin{itemize}
+		\item RF3.2
+	\end{itemize}
+	Manejo de datos: Se leen los atributos seleccionados y se inserta la gráfica en la base de datos.
+	\begin{itemize}
+		\item RD3.2
+	\end{itemize}
+	Salida: A pantalla se muestra una interfaz en la que se representa el registro completo.
+	
+\end{itemize}	
+	
+	\subsubsection{Restricciones semánticas}
