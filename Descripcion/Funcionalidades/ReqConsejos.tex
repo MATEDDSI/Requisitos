@@ -35,8 +35,20 @@
 			Consta de una lista de valores junto con el identificador del
 			atributo al que esta asocido cada uno.
 
-		\item \textbf{RD2.12: Valor de los atributos} optimizado contra un oponente 
+		\item \textbf{RD2.12: Valor de los atributos} optimizado contra un oponente
 			con los atributos especificados.
+
+		\item \textbf{RD2.13: Juego} sobre el que se va a aconsejar.
+			Se require un identificador del juego.
+
+		\item \textbf{RD2.14: Atributos} para los que se quiere consejo.
+			Requiere un identificador de cada atributo.
+
+		\item \textbf{RD2.15: Jugador} del que se obtendrán atributos semejantes.
+			Requiere un identificador del jugador.
+
+		\item \textbf{RD2.16: Valor de los atributos} adaptado para que se parezca
+		 	al del jugador especificado.
 	\end{itemize}
 
 
@@ -104,6 +116,27 @@
 			\begin{itemize}
 				\item RD2.12 %valor atributo
 			\end{itemize}
+
+	\item \textbf{RF2.4: Recomendar un estilo de juego parecido al
+		de un jugador:}
+		El usuario selecciona uno o varios atributos y el sistema
+		proporciona valores que se asemejan a los que suele tener
+		un jugador concreto.\\
+
+		Requisitos de entrada:
+		\begin{itemize}
+			\item RD2.13 %juego
+			\item RD2.14 %atriibutos
+			\item RD2.15 %jugador
+		\end{itemize}
+		Manejo de datos:
+		\begin{itemize}
+			\item RD2.4
+		\end{itemize}
+		Salida:
+		\begin{itemize}
+			\item RD2.16 %atributos salida
+		\end{itemize}
 
 	\end{itemize}
 
