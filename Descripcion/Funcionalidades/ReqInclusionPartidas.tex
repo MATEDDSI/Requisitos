@@ -1,18 +1,32 @@
 %TODO
 \subsubsection{Requisito de datos}
+
 \begin{itemize}
 	\item \textbf{RD3.1: Atributos Principales}, proporcionados por el usuario, se componen de:
 	\begin{itemize}
 		\item Puntuación de la partida.
 		\item Nombre del juego
 	\end{itemize}
-	
+
 	\item \textbf{RD3.2: Atributos Secundarios}, se componen de:
 	\begin{itemize}
 		\item Nombre
 		\item Valor del atributo
 	\end{itemize}
 	La lista de atributos secundarios la definirań los administradores del sistema.
+
+	\item \textbf{RD3.3 Identificador de partida} Asignado por el sistema.
+
+	\item \textbf{RD3.4 Comentarios de otros jugadores} Se permitirá asociar un comentario a la partida de otro jugador.
+
+	\item \textbf{RD3.5 Registro de partida} Se compone de:
+	\begin{itemize}
+		\item Atributos principales (obligatorio)
+		\item Atributos secundarios (opcionales)
+		\item Identificador de partida (obligatorio)
+		\item Comentario de otros jugadores (opcional)
+	\end{itemize}
+
 \end{itemize}
 
 
@@ -20,35 +34,91 @@
 \subsubsection{Requisitos funcionales}
 
 \begin{itemize}
-	\item \textbf{RF3.1 Selección del juego}: El usuario selecciona uno de entre los juegos que recoge el sistema.
+
+	\item \textbf{RF3.1 Inclusión de una partida}: El usuario inserta una pareja que consta de nombre de juego y puntuación, creando un nuevo registro de partida.
+
+	Requisitos de entrada: Nombre del juego y puntuación
 	\begin{itemize}
 		\item RD3.1
 	\end{itemize}
-	Salida: En pantalla se muestran los juegos posibles.
-	
-	\item \textbf{RF3.2 Inclusión de una partida}: El usuario inserta el atributo principal y crea un nuevo registro de partida.
+
+	Manejo de datos: Se leen los atributos, en caso de que el nombre del juego sea aceptado, se crea el registro.
 	\begin{itemize}
-		\item RD3.1
+		\item RD3.5
 	\end{itemize}
-	Requisitos de entrada: Una vez escogido el juego se inserta la puntuación de la partida.
-	
-	Manejo de datos: Se leen el atributo proporcionado y se el registro en la base de datos
-	
-	Salida: Mensaje de conformidad.
-	
-	
-	\item \textbf{RF3.3 Modificación de un registro}: Una vez creado, el usuario podrá añadir atributos opcionales al registro.
-	
-	Requisitos de entrada: Lista de los atributos a insertar
+
+	Salida: Identificador de la partida.
 	\begin{itemize}
-		\item RF3.2
+		\item RD3.3
 	\end{itemize}
-	Manejo de datos: Se leen los atributos seleccionados y se inserta la gráfica en la base de datos.
+
+	\item \textbf{RF3.2 Modificación de un registro}: Una vez creado, el usuario podrá añadir atributos opcionales al registro.
+
+	Requisitos de entrada: Lista de los atributos a insertar e identifificador de la partida.\\
+	\begin{itemize}
+		\item RD3.3
+		\item RD3.5
+	\end{itemize}
+
+	Manejo de datos: Se leen los atributos seleccionados y se insertan en el registro de la partida en cuestión. \\
 	\begin{itemize}
 		\item RD3.2
 	\end{itemize}
+
 	Salida: A pantalla se muestra una interfaz en la que se representa el registro completo.
-	
-\end{itemize}	
-	
+	\begin{itemize}
+		\item RD3.5
+	\end{itemize}
+
+	\item \textbf{RF3.3 Eliminación de un registro} Se permitirá eliminar un resgitro en concreto si poseemos su identificador.
+
+	Requisito de entrada: Identificador de la partida.
+	\begin{itemize}
+		\item RD3.3
+	\end{itemize}
+
+	Manejo de datos: Se busca el registro y se elimina de la base de datos. \\
+	\begin{itemize}
+		\item RD5.5
+	\end{itemize}
+
+	Salida: Mensaje de conformidad. \\
+
+	\item \textbf{RF3.4 Comentar la partida de otro jugador}
+
+	Requisito de entrada: String con el comentario.
+	\begin{itemize}
+		\item RD3.4
+		\item RD3.3
+	\end{itemize}
+
+	Manejo de datos: Se asocia un comentario a la partida de otro jugador
+	\begin{itemize}
+		\item RD3.5
+	\end{itemize}
+
+	Salida: Mensaje de conformidad \\
+
+\end{itemize}
+
 	\subsubsection{Restricciones semánticas}
+
+	\begin{itemize}
+		\item \textbf{RS3.1 La puntuación de una partida es una pareja (a,b) donde a y b son naturales.}
+			\begin{itemize}
+				\item RD3.1
+				\item RF3.1
+			\end{itemize}
+		\item \textbf{RS3.2 El identificador de una partida será un entero.}
+			\begin{itemize}
+				\item RD3.3
+				\item RF3.1
+				\item RF3.3
+			\end{itemize}
+
+		\item \textbf{No se permitirá asociar un string vacío a la sección de comentarios de una partida.}
+		\begin{itemize}
+			\item RD3.4
+			\item RF3.4
+		\end{itemize}
+	\end{itemize}
