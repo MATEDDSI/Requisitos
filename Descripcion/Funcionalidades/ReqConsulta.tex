@@ -1,6 +1,162 @@
 %TODO
 \subsubsection{Requisito de datos}
 
+\begin{itemize}
+	\item \textbf{RD1.1 Juego}. Se compone de:
+	\begin{itemize}
+		\item Un identificador.
+	\end{itemize}
+	
+	\item \textbf{RD1.2 Partidas del juego}. Es en realidad todos los valores de todos los atributos de una partida, un valor por cada atributo. Cada valor puede ser de cualquier tipo, por ejemplo:
+	\begin{itemize}
+		\item Valor númerico.
+		\item Una cadena de caracteres.
+		\item Una letra.
+		\item Una imagen.
+		\item Un vídeo.
+	\end{itemize}
+	
+	\item \textbf{RD1.3 Atributo} de un juego. Se encuentra añadido en la parte previa a la gestión de la base de datos.
+	
+	\item \textbf{RD1.4 Valor} de un atributo. Puede ser de cualquier tipo, por ejemplo:
+	\begin{itemize}
+		\item Valor númerico.
+		\item Una cadena de caracteres.
+		\item Una letra.
+		\item Una imagen.
+		\item Un vídeo.
+	\end{itemize}
+	
+	\item \textbf{RD1.5 Atributos} de un juego. Es un conjunto de varios atributos añadidos en la parte previa a la gestión de la base de datos.
+	
+	\item \textbf{RD1.6 Valores de atributos}, cada valor corresponde a un atributo. Puede ser de cualquier tipo, por ejemplo:
+	\begin{itemize}
+		\item Valor númerico.
+		\item Una cadena de caracteres.
+		\item Una letra.
+		\item Una imagen.
+		\item Un vídeo.
+	\end{itemize}
+	
+	\item \textbf{RD1.7 Orden de los atributos}. Ordenación en la salida.
+	
+	\item \textbf{RD1.8 Suprimir atributos}. Indica qué atributos no se mostrarán en la salida.
+	
+	\item \textbf{RD1.9 Valores de atributos en un orden específico}, cada valor corresponde a un atributo. Puede ser de cualquier tipo, por ejemplo:
+	\begin{itemize}
+		\item Valor númerico.
+		\item Una cadena de caracteres.
+		\item Una letra.
+		\item Una imagen.
+		\item Un vídeo.
+	\end{itemize}
+	
+	\item \textbf{RD1.10 Condición}, seleccionada de una lista de condiciones dada por cada juego y atributo.
+	
+	\item \textbf{RD1.11 Valor} dado por el usuario. Puede ser de cualquier tipo, por ejemplo:
+	\begin{itemize}
+		\item Valor númerico.
+		\item Una cadena de caracteres.
+		\item Una letra.
+	\end{itemize}
+	
+	\item \textbf{RD1.12 Valor numérico}.
+\end{itemize}
+
+
+
+
 \subsubsection{Requisitos funcionales}
+\begin{itemize}
+	\item \textbf{RF1.1 Consultar partidas}: Consultar todas las partidas de un juego.
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.1
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.2
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.2 Consultar un atributo de una partida}. 
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.1
+		\item RD1.3
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.4
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.3 Consultar varios atributos de una partida}. 
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.1
+		\item RD1.5
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.6
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.4 Modificación de la consulta}: Una vez hecha la consulta, visualizarlo de la forma en que se quiera: cambiando atributos de orden, y suprimiendo atributos.
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.6
+		\item RD1.7
+		\item RD1.8
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.9
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.5 Realizar restricción por condición}: Sobre un atributo, exigir que cumpla una condición. Para facilitar esta función, sólo se puede exigir que se cumpla una condición sobre una lista de condiciones, dada por cada juego y a su vez por cada atributo. Por ejemplo, si existiese un atributo en un juego que sólo tiene como valores {Ganado, Empatado, Perdido}, poder restringir a aquellas partidas donde dicho atributo sea "Ganado".
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.3
+		\item RD1.10
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.6
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.6 Realizar restricción por valor}: Sobre un atributo, exigir que cumpla una condición dado un valor. Para facilitar esta función, sólo se puede exigir que se cumpla una condición sobre una lista de condiciones, dada por cada juego y a su vez por cada atributo donde tenga sentido dar un valor. Por ejemplo, para el atributo "Puntuación", poder elegir las partidas donde "Se haya ganado por más de 10 puntos", donde la condición sería seleccionada de una lista dada ("Se haya ganado por más de \_\_ puntos") y el valor pedido sería "10".
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.3
+		\item RD1.10
+		\item RD1.11
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.6
+	\end{itemize}
+	
+	
+	\item \textbf{RF1.7 Contar la consulta}: Tras hacer una consulta, simplemente indicar cuántos cumplen dicha consulta.
+	
+	Requisitos de entrada:
+	\begin{itemize}
+		\item RD1.1
+		\item RD1.5
+	\end{itemize}
+	Salida:
+	\begin{itemize}
+		\item RD1.12
+	\end{itemize}
 
 \subsubsection{Restricciones semánticas}
