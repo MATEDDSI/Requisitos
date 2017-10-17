@@ -60,17 +60,23 @@
 			oponente y el sistema le proporciona valores de los
 			atributos que probablemente sean beneficiosos contra ese oponente.\\
 
-			Requisitos de entrada:
+			Requisitos de entrada: El usuario primero selecciona un juego y
+			después se le presentan los atributos de este y otros
+			jugadores registrados, para que escoja los atributos sobre
+			los que quiere ser aconsejado y el oponenete.
 			\begin{itemize}
 				\item RD2.1 %juego
 				\item RD2.2 %atributos
 				\item RD2.3 %oponente
 			\end{itemize}
-			Manejo de datos:
+			Manejo de datos: El sistema lee varias partidas registradas
+			en la base de datos, en las que el oponente sea relevante,
+			y hace inferencia sobre ellas para aconsejar buenos atributos.
 			\begin{itemize}
 				\item RD2.4 %partidas relevantes
 			\end{itemize}
-			Salida:
+			Salida: Se le presentan al usuario los valores optimizados
+			para cada atributo escogido.
 			\begin{itemize}
 				\item RD2.5 %valor atributo
 			\end{itemize}
@@ -81,16 +87,21 @@
 			que probablemente sean beneficiosos en la mayoría
 			de partidas que juegue.\\
 
-			Requisitos de entrada:
+			Requisitos de entrada: El usuario primero selecciona un juego y
+			después se le presentan los atributos para que escoja sobre
+			los que quiere ser aconsejado.
 			\begin{itemize}
 				\item RD2.6 %juego
 				\item RD2.7 %atributos
 			\end{itemize}
-			Manejo de datos:
+			Manejo de datos: El sistema lee varias partidas registradas
+			en la base de datos y hace inferencia sobre ellas para
+			aconsejar buenos atributos.
 			\begin{itemize}
 				\item RD2.4 %partidas relevantes
 			\end{itemize}
-			Salida:
+			Salida: Se le presentan al usuario los valores optimizados
+			para cada atributo escogido.
 			\begin{itemize}
 				\item RD2.8 %valor atributo
 			\end{itemize}
@@ -102,17 +113,24 @@
 			probablemente sean beneficiosos contra un adversario con
 			los atributos especificados.\\
 
-			Requisitos de entrada:
+			Requisitos de entrada: El usuario primero selecciona un juego y
+			después se le presentan los atributos para que escoja sobre
+			los que quiere ser aconsejado y los valores de los de un
+			oponente hipotético.
 			\begin{itemize}
 				\item RD2.9 %juego
 				\item RD2.10 %atributo
 				\item RD2.11 %atributos oponente
 			\end{itemize}
-			Manejo de datos:
+			Manejo de datos: El sistema lee varias partidas registradas
+			en la base de datos, en las que los valores de los atributos
+			del oponente sean relevantes, y hace inferencia sobre ellas para
+			aconsejar buenos atributos.
 			\begin{itemize}
 				\item RD2.4 %partidas relevantes
 			\end{itemize}
-			Salida:
+			Salida: Se le presentan al usuario los valores optimizados
+			para cada atributo escogido.
 			\begin{itemize}
 				\item RD2.12 %valor atributo
 			\end{itemize}
@@ -142,3 +160,11 @@
 
 
 \subsubsection{Restricciones semánticas}
+	%\begin{itemize}
+	%	\item \textbf{RS2.1 Los atributos deben pertenecer al juego} 
+	%		\begin{itemize}
+	%			\item RF2.1
+	%			\item RD2.1
+	%			\item RD2.2
+	%		\end{itemize}
+	%\end{itemize}
