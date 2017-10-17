@@ -13,12 +13,82 @@
 		\item Valor del atributo
 	\end{itemize}
 	
+	\item \textbf{RD4.3: Gráfica 2D realizada}, se compone de:
+	\begin{itemize}
+		\item Imagen con la gráfica
+	\end{itemize}
+	
+	\item \textbf{RD4.4: Atributos de entrada a una gráfica 3D}, se componen de:
+	\begin{itemize}
+			\item Atributo de la partida sobre la X
+			\item Atributo de la partida sobre la Y
+			\item Atributo de la partida sobre la Z
+	\end{itemize}
+	
+	
+	\item \textbf{RD4.5: Gráfica 3D}, se compone de:
+	\begin{itemize}
+			\item Imagen con la gráfica
+	\end{itemize}
+	
+	\item \textbf{RD4.6: Atributos de entrada a una gráfica de columnas agrupadas}, se componen de:
+	\begin{itemize}
+		\item Atributo de la partida sobre la X
+		\item Atributo de primer tipo de columna
+		\item Atributo del segundo tipo de columna
+	\end{itemize}
+	
+	\item \textbf{RD4.7: Gráfica de columnas agrupadas}, se compone de:
+	\begin{itemize}
+		\item Imagen con la gráfica
+	\end{itemize}
+	
+	\item \textbf{RD4.8: Atributos de entrada a una gráfica circular}, se componen de:
+	\begin{itemize}
+		\item Atributo sobre el que se hace el círculo
+	\end{itemize}
+	
+	\item \textbf{RD4.9: Gráfica circular}, se compone de:
+	\begin{itemize}
+			\item Imagen con la gráfica
+	\end{itemize}
+	
+	\item \textbf{RD4.10: Atributo y función elemental}, se compone de:
+	\begin{itemize}
+		\item Atributo sobre el que se hace la función
+		\item Función, a elegir, entre media, varianza, suma, contar, máximo o mínimo
+	\end{itemize}
+	
+	\item \textbf{RD4.11: Resultado de la función}, se compone de:
+	\begin{itemize}
+		\item Resultado de la operación sobre el atributo
+	\end{itemize}
+	
+	\item \textbf{RD4.12: Petición de conseguir las últimas gráficas}, se compone de:
+	\begin{itemize}
+		\item Activación de petición de la gráfica (pulsación de un botón)
+	\end{itemize}
+	
+	\item \textbf{RD4.13: Gráficas anteriores}, se compone de:
+	\begin{itemize}
+		\item Imágenes de gráficas
+	\end{itemize}
+	
+	\item \textbf{RD4.14: Gráficas anteriores como salida}, se compone de:
+	\begin{itemize}
+		\item Imágenes de gráficas
+	\end{itemize}
+	
+	
+	
+	
+	
 \end{itemize}
 \subsubsection{Requisitos funcionales}
 \begin{itemize}
 	\item \textbf{RF4.1 Realizar gráfica 2D de unos atributos}: El usuario selecciona dos atributos, de los cuales se realiza una gráfica 2D
 	
-	Requisitos de entrada: Escoger gráfica 2D y elegir qué dos atributos se escogen
+	Requisitos de entrada: Elegir qué dos atributos se escogen
 	\begin{itemize}
 		\item RD4.1
 	\end{itemize}
@@ -33,79 +103,94 @@
 	
 	\item \textbf{RF4.2 Realizar gráfica 3D de unos atributos}: El usuario selecciona tres atributos, de los cuales se realiza una gráfica 3D
 	
-	Requisitos de entrada: Escoger gráfica 3D y elegir qué tres atributos se escogen
+	Requisitos de entrada: Elegir qué tres atributos se escogen
 	\begin{itemize}
 		\item RD4.4
 	\end{itemize}
 	Manejo de datos: Se leen los tres atributos seleccionados  y se inserta la gráfica en la base de datos
 	\begin{itemize}
-		\item RD4.5
+		\item RD4.2
 	\end{itemize}
 	Salida: Gráfica 3D
 	\begin{itemize}
-		\item RD4.6
+		\item RD4.5
 	\end{itemize}
 	
 	\item \textbf{RF4.3 Realizar gráfica de columnas agrupadas de unos atributos}: El usuario selecciona dos atributos para las columnas y un tercero para el eje de abscisas, de los cuales se realiza la gráfica
 	
-	Requisitos de entrada: Escoger gráfica columnas agrupadas y elegir qué atributos se escogen
+	Requisitos de entrada: Elegir qué atributos se escogen
 	\begin{itemize}
-		\item RD4.7
+		\item RD4.6
 	\end{itemize}
 	Manejo de datos: Se leen los atributos seleccionados y se inserta la gráfica en la base de datos.
 	\begin{itemize}
-		\item RD4.8
+		\item RD4.2
 	\end{itemize}
 	Salida: Gráfica
 	\begin{itemize}
-		\item RD4.9
+		\item RD4.7
 	\end{itemize}
 	
 	\item \textbf{RF4.4 Realizar gráfica circular de unos atributos}: El usuario selecciona un atributo, del cual se hace una gráfica porcentual en forma de círculo
 	
-	Requisitos de entrada: Escoger gráfica circular y elegir qué atributos se escoge.
+	Requisitos de entrada: Elegir qué atributos se escoge.
 	\begin{itemize}
-		\item RD4.10
+		\item RD4.8
 	\end{itemize}
 	Manejo de datos: Se lee el atributo seleccionado y se inserta la gráfica en la base de datos.
 	\begin{itemize}
-		\item RD4.11
+		\item RD4.2
 	\end{itemize}
 	Salida: Gráfica.
 	\begin{itemize}
-		\item RD4.12
+		\item RD4.9
 	\end{itemize}
 	
 	\item \textbf{RF4.5 Realizar una función elemental sobre un atributo concreto}: El usuario selecciona una función elemental (detalladas en la entrada de este requisito) y un atributo sobre el que operar, y se devuelve el resultado de la operación.
 	
 	Requisitos de entrada: El atributo y la función, a elegir entre media, varianza, suma, contar, máximo o mínimo.
 	\begin{itemize}
-		\item RD4.13
+		\item RD4.10
 	\end{itemize}
 	Manejo de datos: Se lee el atributo seleccionado y se opera.
 	\begin{itemize}
-		\item RD4.14
+		\item RD4.2
 	\end{itemize}
 	Salida: Resultado de la función.
 	\begin{itemize}
-		\item RD4.15
+		\item RD4.11
 	\end{itemize}
 	
 	\item \textbf{RF4.6 Conseguir las últimas gráficas pedidas}: El usuario le da a un botón para ver las últimas gráficas que ha pedido.
 	
 	Requisitos de entrada: La activación de un botón.
 	\begin{itemize}
-		\item RD4.16
+		\item RD4.12
 	\end{itemize}
 	Manejo de datos: Se cogen las gráficas realizadas en función de su fecha.
 	\begin{itemize}
-		\item RD4.17
+		\item RD4.13
 	\end{itemize}
 	Salida: Gráficas, ordenadas de más a menos recientes.
 	\begin{itemize}
-		\item RD4.18
+		\item RD4.14
 	\end{itemize}
 	
 \end{itemize}
 
 \subsubsection{Restricciones semánticas}
+
+\begin{itemize}
+	\item \textbf{RS4.1 El atributo sobre la Y de RD4.1 sobre el requisito funcional de hacer una gráfica 2D RF4.1 debe ser de tipo numérico.}
+	
+	\item \textbf{RS4.2 El atributo sobre la Z de RD4.4 sobre el requisito funcional de hacer una gráfica 3D RF4.2 debe ser de tipo numérico.}
+	
+	\item \textbf{RS4.3 El atributo de los tipos de columnas en RD4.6 sobre el requisito funcional de hacer una gráfica de columnas agrupadas en RF4.3 deben ser de tipo numérico.}
+	
+	\item \textbf{RS4.4 El atributo de entrada a una gráfica circular en RD4.8 sobre el requisito funcional RF4.4 debe ser de tipo numérico.}
+	
+	\item \textbf{RS4.5 Los atributos de entrada a una función elemental en RD4.10 sobre el requisito funcional RF4.5 deben ser de tipo numérico.}
+	
+	
+	
+\end{itemize}
