@@ -1,20 +1,15 @@
 En todos los juegos en los que se guarde el estilo de juego, la aplicación
-aconseja cómo jugar contra un oponente en concreto, recomendando al usuario aquellos
-estilos que más probabilidades tengan de ganar contra ese adversario.\\
+aconseja cómo jugar en determinadas condiciones, recomendando al usuario aquellos
+estilos que más probabilidades tengan de ganar.\\
 
-Tanto los distintos estilos como los consejos asociados a estos dependen
-del juego a tratar. Por ejemplo, en juegos de estrategia como el ajedrez, se podrían
-analizar las estrategias más utilizadas por un jugador y recomendar al usuario
-que estudie determinadas jugadas que le puedan dar ventaja, en el caso de juegos
-de mazos de cartas (e.g. Magic, Hearthstone) también sería posible recomendar algunas
-configuraciones de mazos, incluso en algunos deportes se podrían recomendar
-alineaciones y jugadores.\\
+Dado un juego, el usuario podrá elegir uno o varios atributos de este (e.g. estilo
+de juego en un partido de baloncesto: ofensivo o defensivo) y ciertos datos extra,
+como el oponente al que se quiere enfrentar, o ciertos valores de los atributos 
+que puede tener el oponente y el sistema analiza los datos guardados en la base
+de datos para aconsejar unos valores que puedan ser beneficiosos (e.g. jugar ofensivo).\\
 
-Debido a las diferencias en los aspectos recomendables entre distintos juegos será
-necesario que cada vez que se dé soporte a un nuevo juego se especifiquen 
-las posibles recomendaciones (requisitos funcionales), los datos necesarios
-para llevarlas a cabo (requisitos de datos) y la forma de analizar estos datos
-para proporcionar los consejos (implementación).\\
+El subsistema debería dar información extra sobre el proceso de como ha elgido los
+valores de los atributos, como el número de jugadas analizadas y la fiabilidad de los datos.\\
 
 También es posible que el subsistema de consejos use funcionalidades del subsistema
 de estadísticas, siempre que dicha funcionalidad esté implementada, para que las
