@@ -17,14 +17,15 @@
 
 	\item \textbf{RD3.3 Identificador de partida} Asignado por el sistema.
 
-	\item \textbf{RD3.4 Comentarios de otros jugadores} Se permitirá asociar un comentario a la partida de otro jugador.
+	\item \textbf{RD3.4 Comentarios } Se permitirá asociar un comentario a la partida de otro jugador.
 	\begin{itemize}
 	\item String con el comentario
-	\item identificador de partida
+	\item	nombre de la partida
 	\end{itemize}
 
 	\item \textbf{RD3.5 Registro de partida} Se compone de:
 	\begin{itemize}
+		\item nombre de la partida	(obligatorio)
 		\item Atributos principales (obligatorio)
 		\item Atributos secundarios (opcionales)
 		\item Identificador de partida (obligatorio)
@@ -37,6 +38,10 @@
 	\item identificador de partida
 	\end{itemize}
 
+\item \textbf{RD3.7 Nombre de la Partida}	compuesto de:
+\begin{itemize}
+	\item	nombre (string, asignado por el jugador)
+\end{itemize}
 
 \end{itemize}
 
@@ -72,20 +77,17 @@
 
 	Manejo de datos: Se leen los atributos seleccionados y se insertan en el registro de la partida en cuestión. \\
 	\begin{itemize}
-		\item RD3.2
 		\item RD3.5
+		\item RD3.2
 	\end{itemize}
 
-	Salida: A pantalla se muestra una interfaz en la que se representa el registro completo.
-	\begin{itemize}
-		\item RD3.5
-	\end{itemize}
+	Salida: Mensaje de conformidad
 
 	\item \textbf{RF3.3 Eliminación de un registro} Se permitirá eliminar un resgitro en concreto si poseemos su identificador.
 
-	Requisito de entrada: Identificador de la partida.
+	Requisito de entrada: Partida a eliminar.
 	\begin{itemize}
-		\item RD3.3
+		\item RD3.7
 	\end{itemize}
 
 	Manejo de datos: Se busca el registro y se elimina de la base de datos. \\
@@ -126,9 +128,18 @@
 				\item RF3.3
 			\end{itemize}
 
-		\item \textbf{No se permitirá asociar un string vacío a la sección de comentarios de una partida.}
+		\item \textbf{RS3.3 No se permitirá asociar un string vacío a la sección de comentarios de una partida.}
 		\begin{itemize}
 			\item RD3.4
 			\item RF3.4
 		\end{itemize}
+
+		\item \textbf{RS3.4 Tanto el identificador como el nombre de una partida en concreto serán distinguibles del resto.}
+		\item RD3.3
+		\item RD3.4
+		\item RD3.7
+		\item RF3.1
+		\item RF3.2
+		\item RF3.3
+		\item RF3.4
 	\end{itemize}
