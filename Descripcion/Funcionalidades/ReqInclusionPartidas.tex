@@ -18,6 +18,10 @@
 	\item \textbf{RD3.3 Identificador de partida} Asignado por el sistema.
 
 	\item \textbf{RD3.4 Comentarios de otros jugadores} Se permitirá asociar un comentario a la partida de otro jugador.
+	\begin{itemize}
+	\item String con el comentario
+	\item identificador de partida
+	\end{itemize}
 
 	\item \textbf{RD3.5 Registro de partida} Se compone de:
 	\begin{itemize}
@@ -26,6 +30,13 @@
 		\item Identificador de partida (obligatorio)
 		\item Comentario de otros jugadores (opcional)
 	\end{itemize}
+
+	\item \textbf{RD3.6 Modificador de un registro} compuesto de:
+	\begin{itemize}
+	\item Atributos secundarios
+	\item identificador de partida
+	\end{itemize}
+
 
 \end{itemize}
 
@@ -56,13 +67,13 @@
 
 	Requisitos de entrada: Lista de los atributos a insertar e identifificador de la partida.\\
 	\begin{itemize}
-		\item RD3.3
-		\item RD3.5
+		\item RD3.6
 	\end{itemize}
 
 	Manejo de datos: Se leen los atributos seleccionados y se insertan en el registro de la partida en cuestión. \\
 	\begin{itemize}
 		\item RD3.2
+		\item RD3.5
 	\end{itemize}
 
 	Salida: A pantalla se muestra una interfaz en la que se representa el registro completo.
@@ -89,7 +100,6 @@
 	Requisito de entrada: String con el comentario.
 	\begin{itemize}
 		\item RD3.4
-		\item RD3.3
 	\end{itemize}
 
 	Manejo de datos: Se asocia un comentario a la partida de otro jugador
