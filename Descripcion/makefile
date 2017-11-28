@@ -1,14 +1,16 @@
-DIA=../Diagramas
+DIASDIR=../Diagramas
+DIAS=$(wildcard ${DIASDIR}/*.dia) $(wildcard ${DIASDIR}/*/*.dia)
+PDFDIAS:=$(subst ${DIASDIR},${DIASDIR}/pdf,${DIAS})
+PDFDIAS:=$(PDFDIAS:.dia=.pdf)
 
 all: diagramas pdf
 
-pdf: Descripcion.tex Funcionalidades/* Operaciones/*
+pdf: Descripcion.tex $(wildcard */*.tex)
 	pdflatex $< > /dev/null
 	rm *.aux *.toc *.log
 
-diagramas: ${DIA}/* diagramas_consejos
-	for d in `ls ${DIA} | grep .dia$$` ; do inkscape --export-pdf=${DIA}/pdf/$${d%.dia}.pdf ${DIA}/$$d ; done
+diagramas: ${PDFDIAS}
 
-diagramas_consejos: ${DIA}/Consejos/*
-	for d in `ls ${DIA}/Consejos | grep .dia$$` ; do inkscape --export-pdf=${DIA}/pdf/$${d%.dia}.pdf ${DIA}/Consejos/$$d ; done
-
+${DIASDIR}/pdf/%.pdf: ${DIASDIR}/%.dia
+	mkdir -p $(dir $@)
+	inkscape --export-pdf=$@ $<
