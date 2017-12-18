@@ -6,12 +6,15 @@ $DF_1 = \{\}$\\
 $R = \{nombreJugador, idPartida, puntuacion,fecha \} $ \\
 $DF_1 = \{ \{nombreJugador,idPartida \} \rightarrow puntuacion,fecha\}$ \\
 
+Está en FNBC porque $(idEstadistica,idPartida)$ es clave candidata y $puntuacion$y $fecha$ no están contenidas en ella.
+
 \item{\large{Pertenece}}\\
 $R = \{idPartida,nombreJuego\} $\\
 $DF_1 = \{ \{idPartida\} \rightarrow nombreJuego \}$\\
+Está en FNBC porque $idPartida$ es clave candidata y $nombreJuego$ no está contenido en ella.
 
 \item{\large{Jugador}}\\
 $R = \{nombre\} \\
-$DF_1 = \{\}$\\
+$ DF_1 = \{\} $ \\
 
 Todas las tablas están normalizadas ya que presentan una única dependencia funcional.
