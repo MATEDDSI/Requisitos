@@ -1,11 +1,17 @@
 \item{{\large Tiene\_en\_Caché}}\\
 	$R = \{idEstadistica,nombreUsuario\}$\\
 	$DF_1 = \{idEstadistica \rightarrow nombreUsuario\}$\\
+	
+	Está normalizada (Boyce-Codd) porque $idEstadistica$ es clave candidata y $nombreUsuario$ no está contenido en ella. Por lo tanto, está en forma normal de Boyce-Codd.
 
 \item {{\large Usuario}}\\
 	$R = \{nombre, password\}$\\
 	$DF_1 = \{nombre \rightarrow password\}$\\
+	
+	Está normalizada (Boyce-Codd) porque $nombre$ es clave candidata y $password$ no está contenido en ella. Por lo tanto, está en forma normal de Boyce-Codd.
 
 \item{{\large Tiene}}\\
 	$R = \{nombreJuego, nombreAtributo\}$\\
 	$DF_1 = \{\}$
+
+	Tabla normalizada.
