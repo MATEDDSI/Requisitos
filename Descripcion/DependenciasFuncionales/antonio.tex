@@ -1,0 +1,14 @@
+\item{{\large Estadistica}}\\
+$R = \{id, imagen\}$\\
+$DF_1 = \{id \rightarrow imagen\}$\\
+Esta tabla ya está en FNBC, id es una clave candidata (en este caso la única), e imagen no está contenida en ella. Además, al haber una sola dependencia funcional no hay transitivas problemáticas y todos los elementos no primos, en este caso imagen, dependen completamente de la clave candidata, ya que solo hay un elemento en ella.
+
+\item {{\large Atributo}}\\
+$R = \{nombre, tipo\}$\\
+$DF_1 = \{nombre \rightarrow tipo\}$\\
+Esta tabla ya está en FNBC, nombre es una clave candidata (en este caso la única), y tipo no está contenido en él. Además, al haber una sola dependencia funcional no hay transitivas problemáticas y todos los elementos no primos, en este caso tipo, dependen completamente de la clave candidata, ya que solo hay un elemento en ella.
+
+\item{{\large Comenta}}\\
+$R = \{nombreUsuario, idPartida, comentario\}$\\
+$DF_1 = \{\}$
+Esta tabla ya está en FNBC al no haber dependencias funcionales más que las triviales. Necesitas todo el conjunto para determinar la tupla de comenta. Así que todo el conjunto tiene que ser la clave primaria (y única clave candidata).
